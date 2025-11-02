@@ -1,3 +1,9 @@
+/*
+  Main stylesheet for the KXO205 Accommodation Booking website.
+  Author: Shengyi Shi, Yuming Deng, Mingxuan Xu, Yanzhang Lu
+*/
+
+/* --- Root Variables for Theming --- */
 :root {
   --bg-color: #fff;
   --text-color: #212529;
@@ -10,6 +16,7 @@
   --section-bg-color: #f8f9fa;
 }
 
+/* --- Dark Mode Variables --- */
 html.dark-mode {
   --bg-color: #121212;
   --text-color: #e0e0e0;
@@ -22,6 +29,7 @@ html.dark-mode {
   --section-bg-color: var(--bg-color);
 }
 
+/* --- General Body and Typography --- */
 body {
   font-family: "Arial", sans-serif;
   background-color: var(--bg-color);
@@ -31,6 +39,7 @@ body {
   margin: 0;
 }
 
+/* --- Component Styles --- */
 .card {
   background-color: var(--card-bg-color);
   color: var(--text-color);
@@ -48,7 +57,7 @@ header {
   color: var(--header-text-color) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s, color 0.3s;
-  overflow: visible; 
+  overflow: visible;
 }
 
 header.bg-dark {
@@ -70,6 +79,7 @@ header.bg-dark {
   color: #fff;
 }
 
+/* --- Section Styles --- */
 .hero-section {
   background: url("../img/bg.avif") no-repeat center center;
   background-size: cover;
@@ -88,13 +98,13 @@ header.bg-dark {
   margin-bottom: 30px;
 }
 
-
+/* --- Navigation Styles --- */
 .nav .nav-link.text-secondary {
   font-weight: bold;
   border-bottom: 2px solid #ffc107;
 }
 
-
+/* --- Theme Toggle Button --- */
 .theme-toggle-btn {
   color: var(--link-color);
   background-color: transparent;
@@ -107,7 +117,7 @@ header.bg-dark {
   background-color: var(--link-color);
 }
 
-
+/* --- Header Link Colors --- */
 header a,
 header .nav-link,
 header span {
@@ -118,7 +128,7 @@ header a.text-white {
   color: var(--link-color) !important;
 }
 
-
+/* --- Dark Mode Form Styles --- */
 html.dark-mode .form-control,
 html.dark-mode .form-select {
   background-color: #2d2d2d;
@@ -138,7 +148,7 @@ html.dark-mode .form-control::placeholder {
   color: #888;
 }
 
-
+/* --- Form Validation Styles --- */
 .error-message {
   display: block;
   width: 100%;
@@ -146,10 +156,10 @@ html.dark-mode .form-control::placeholder {
   font-size: 0.875rem;
   color: #dc3545;
   line-height: 1.4;
-  min-height: 1.4em; 
-  height: 1.4em; 
+  min-height: 1.4em;
+  height: 1.4em;
   flex-shrink: 0;
-  visibility: visible; 
+  visibility: visible;
 }
 
 .form-control.is-invalid {
@@ -170,7 +180,7 @@ html.dark-mode .form-control::placeholder {
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
-
+/* --- Dark Mode Validation Styles --- */
 html.dark-mode .error-message {
   color: #ff6b6b;
 }
@@ -193,7 +203,7 @@ html.dark-mode .form-control.is-valid:focus {
   box-shadow: 0 0 0 0.2rem rgba(81, 207, 102, 0.25);
 }
 
-
+/* --- Dark Mode General Overrides --- */
 html.dark-mode .search-panel {
   background-color: transparent !important;
 }
@@ -202,14 +212,12 @@ html.dark-mode .bg-light {
   background-color: #1e1e1e !important;
 }
 
-
 html.dark-mode .text-muted,
 html.dark-mode small,
 html.dark-mode footer,
 html.dark-mode footer * {
   color: var(--text-color) !important;
 }
-
 
 html.dark-mode .form-text,
 html.dark-mode .invalid-feedback,
@@ -233,7 +241,7 @@ html.dark-mode .link-secondary:hover {
   color: var(--link-secondary-color) !important;
 }
 
-
+/* --- Dark Mode List and Table Styles --- */
 html.dark-mode .list-group-item {
   background-color: #2d2d2d !important;
   border-color: #404040 !important;
@@ -260,7 +268,6 @@ html.dark-mode .list-group-flush .list-group-item {
 html.dark-mode .text-primary {
   color: #ffc107 !important;
 }
-
 
 html.dark-mode .table {
   color: var(--text-color);
@@ -291,7 +298,7 @@ html.dark-mode .table-hover tbody tr:hover td {
   background-color: #353535;
 }
 
-
+/* --- Scroll to Top Button --- */
 #scrollTopBtn {
   position: fixed;
   bottom: 30px;
@@ -339,7 +346,7 @@ html.dark-mode .table-hover tbody tr:hover td {
   justify-content: center;
 }
 
-
+/* --- Dark Mode Scroll to Top Button --- */
 html.dark-mode #scrollTopBtn {
   background-color: #ffc107;
   color: #212529;
@@ -349,7 +356,7 @@ html.dark-mode #scrollTopBtn:hover {
   background-color: #ffb300;
 }
 
-
+/* --- Responsive Adjustments --- */
 @media (max-width: 575.98px) {
   #scrollTopBtn {
     bottom: 20px;
@@ -360,18 +367,15 @@ html.dark-mode #scrollTopBtn:hover {
   }
 }
 
-
-
-
+/* --- Layout and Overflow Fixes --- */
 html {
   overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
 }
-
 
 .container {
   padding-left: 15px;
@@ -380,7 +384,7 @@ body {
   overflow-x: hidden;
 }
 
-
+/* --- Header Adjustments --- */
 header .container {
   padding: 0 15px;
 }
@@ -393,12 +397,12 @@ header .bi-house-heart-fill {
   font-size: 1.5rem !important;
 }
 
-
+/* --- Main Content Padding --- */
 main {
   padding-bottom: 2rem;
 }
 
-
+/* --- Card and Form Styles --- */
 .card {
   margin-bottom: 1.5rem;
 }
@@ -407,7 +411,6 @@ main {
   height: 200px;
   object-fit: cover;
 }
-
 
 .form-control {
   font-size: 1rem;
@@ -419,12 +422,10 @@ main {
   font-size: 1rem;
 }
 
-
-
+/* --- Search Form Layout --- */
 .row.g-3.align-items-end {
-  align-items: stretch !important; 
+  align-items: stretch !important;
 }
-
 
 .row.g-3 > [class*="col-"] {
   position: relative;
@@ -432,11 +433,9 @@ main {
   flex-direction: column;
 }
 
-
 .row.g-3 > [class*="col-"]:not(.d-grid) {
-  min-height: 95px; 
+  min-height: 95px;
 }
-
 
 .row.g-3 > [class*="col-"] .form-label {
   margin-bottom: 0.5rem;
@@ -447,15 +446,13 @@ main {
   flex-shrink: 0;
 }
 
-
 .row.g-3 > [class*="col-"].d-grid {
-  display: flex !important; 
+  display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   min-height: 95px;
   padding-top: 0;
 }
-
 
 .row.g-3 > [class*="col-"].d-grid::before {
   content: "";
@@ -469,12 +466,10 @@ main {
   margin: 0;
 }
 
-
 .row.g-3 > [class*="col-"].d-grid .error-message {
   margin-top: 0.25rem;
   flex-shrink: 0;
 }
-
 
 .row.g-3.align-items-end > [class*="col-"]:has(.btn):not(:has(.form-control)) {
   display: flex !important;
@@ -486,7 +481,7 @@ main {
   margin-top: auto;
 }
 
-
+/* --- Table and List Styles --- */
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -497,12 +492,11 @@ main {
   font-size: 0.9rem;
 }
 
-
 .list-group-item {
   padding: 1rem;
 }
 
-
+/* --- Hero Section Responsive --- */
 .hero-section {
   padding: 2rem 0;
   min-height: auto;
@@ -521,10 +515,10 @@ main {
   padding: 1rem;
 }
 
-
+/* --- Mobile Responsive (max-width: 575.98px) --- */
 @media (max-width: 575.98px) {
   body {
-    padding-top: 200px; 
+    padding-top: 200px;
   }
 
   header {
@@ -532,7 +526,6 @@ main {
     min-height: auto;
   }
 
-  
   header .container {
     padding: 0 10px;
   }
@@ -541,7 +534,6 @@ main {
     flex-wrap: wrap;
   }
 
-  
   header a[href="index.html"] {
     margin-bottom: 0.5rem;
   }
@@ -554,7 +546,6 @@ main {
     font-size: 1.2rem !important;
   }
 
-  
   header .nav {
     font-size: 0.8rem;
     margin: 0.5rem 0;
@@ -566,7 +557,6 @@ main {
     padding: 0.4rem 0.6rem !important;
   }
 
-  
   header .text-end {
     width: 100%;
     text-align: center !important;
@@ -592,7 +582,6 @@ main {
     padding: 0.4rem 0.6rem;
   }
 
-  
   .hero-section {
     padding: 1.5rem 0;
     margin-top: 0;
@@ -608,7 +597,6 @@ main {
     margin-bottom: 1rem;
   }
 
-  
   .search-panel {
     padding: 1rem 0.75rem;
     margin-top: 0;
@@ -626,7 +614,6 @@ main {
     padding: 0 0.25rem;
   }
 
-  
   .search-panel .row.g-3 > [class*="col-"] {
     min-height: auto;
   }
@@ -637,7 +624,7 @@ main {
 
   .search-panel .form-control {
     width: 100%;
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .search-panel .btn {
@@ -646,7 +633,6 @@ main {
     font-size: 1rem;
   }
 
-  
   main {
     padding: 1rem 0.5rem 2rem;
   }
@@ -656,7 +642,6 @@ main {
     padding-right: 10px;
   }
 
-  
   .card {
     margin-bottom: 1.5rem;
   }
@@ -681,25 +666,22 @@ main {
     font-size: 0.9rem;
   }
 
-  
   .form-control,
   .btn {
     font-size: 0.9rem;
-    touch-action: manipulation; 
+    touch-action: manipulation;
   }
 
   .form-control {
     padding: 0.75rem;
   }
 
-  
   .error-message {
     font-size: 0.8rem;
     margin-top: 0.25rem;
     word-wrap: break-word;
   }
 
-  
   .list-group-item {
     padding: 0.75rem;
     font-size: 0.9rem;
@@ -713,7 +695,6 @@ main {
     font-size: 0.8rem;
   }
 
-  
   .table {
     font-size: 0.8rem;
   }
@@ -728,7 +709,6 @@ main {
     font-size: 0.75rem;
   }
 
-  
   h2 {
     font-size: 1.5rem;
   }
@@ -738,10 +718,10 @@ main {
   }
 }
 
-
+/* --- Tablet Responsive (576px - 767.98px) --- */
 @media (min-width: 576px) and (max-width: 767.98px) {
   body {
-    padding-top: 140px; 
+    padding-top: 140px;
   }
 
   header {
@@ -782,7 +762,6 @@ main {
     height: 220px;
   }
 
-  
   .col-md-4 {
     width: 50%;
     flex: 0 0 50%;
@@ -790,7 +769,7 @@ main {
   }
 }
 
-
+/* --- Small Desktop Responsive (768px - 991.98px) --- */
 @media (min-width: 768px) and (max-width: 991.98px) {
   body {
     padding-top: 80px;
@@ -814,7 +793,6 @@ main {
     height: 200px;
   }
 
-  
   .col-md-4 {
     width: 33.333%;
     flex: 0 0 33.333%;
@@ -822,7 +800,7 @@ main {
   }
 }
 
-
+/* --- Medium Desktop Responsive (992px - 1199.98px) --- */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .hero-section h1 {
     font-size: 2.5rem;
@@ -833,7 +811,7 @@ main {
   }
 }
 
-
+/* --- Large Desktop Responsive (min-width: 1200px) --- */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -852,7 +830,7 @@ main {
   }
 }
 
-
+/* --- Extra Large Desktop Responsive (min-width: 1400px) --- */
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
@@ -863,7 +841,7 @@ main {
   }
 }
 
-
+/* --- Utility Classes --- */
 .d-flex {
   display: flex !important;
 }
@@ -884,7 +862,7 @@ main {
   justify-content: space-between !important;
 }
 
-
+/* --- Touch Device Optimizations --- */
 @media (hover: none) and (pointer: coarse) {
   .btn {
     min-height: 44px;
@@ -893,7 +871,7 @@ main {
 
   .form-control {
     min-height: 44px;
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .nav-link {
@@ -905,7 +883,7 @@ main {
   }
 }
 
-
+/* --- Print Styles --- */
 @media print {
   header,
   footer,
