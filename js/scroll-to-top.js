@@ -1,3 +1,9 @@
+/**
+ * @file scroll-to-top.js
+ * @description Adds a scroll-to-top button to the website.
+ * @author Shengyi Shi, Yuming Deng, Mingxuan Xu, Yanzhang Lu
+ */
+
 // Scroll to top button functionality
 document.addEventListener("DOMContentLoaded", function () {
   // Create scroll to top button
